@@ -10,6 +10,7 @@ const initialState = {
   isRefreshing: false,
 };
 
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
