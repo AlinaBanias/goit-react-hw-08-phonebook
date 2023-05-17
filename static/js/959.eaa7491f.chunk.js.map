@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/959.eaa7491f.chunk.js","mappings":"qKAWA,UARiB,WACf,OAEE,SAAC,KAAD,GAGH,C","sources":["pages/Register/Register.js"],"sourcesContent":["import { RegisterForm } from 'components';\n\n\nconst Register = () => {\n  return (\n  \n    <RegisterForm />\n\n  );\n};\n\nexport default Register;"],"names":[],"sourceRoot":""}
