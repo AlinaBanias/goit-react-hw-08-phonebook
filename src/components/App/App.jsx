@@ -34,12 +34,12 @@ const App = () => {
         <b>Refreshing user...</b>
       ) : (
         <Routes>
-          <Route path="/goit-react-hw-08-phonebook" element={<SharedLayout />}>
+          <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route
               path="contacts"
               element={
-                <PrivateRoute redirectTo="/goit-react-hw-08-phonebook/login">
+                <PrivateRoute redirectTo="/login">
                   <Contacts />
                 </PrivateRoute>
               }
@@ -47,7 +47,7 @@ const App = () => {
               <Route
                 path="edit/:contactId"
                 element={
-                  <PrivateRoute redirectTo="/goit-react-hw-08-phonebook/login">
+                  <PrivateRoute redirectTo="/login">
                     <EditContactModal />
                   </PrivateRoute>
                 }
@@ -59,7 +59,7 @@ const App = () => {
               element={
                 <RestrictedRoute
                   component={Register}
-                  redirectTo="/goit-react-hw-08-phonebook/contacts"
+                  redirectTo="/contacts"
                 />
               }
             />
@@ -69,7 +69,7 @@ const App = () => {
               element={
                 <RestrictedRoute
                   component={Login}
-                  redirectTo="/goit-react-hw-08-phonebook/contacts"
+                  redirectTo="/contacts"
                 />
               }
             />

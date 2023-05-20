@@ -55,17 +55,22 @@ const ContactItem = ({ name, number, id }) => {
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
 
   const handleButtonClick = async id => {
-    await deleteContact(id).unwrap();
-    toast.info('Contact deleted', {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored',
+    await deleteContact(id).unwrap().then(() => {
+        toast.info('Contact deleted', {
+            position: 'top-center',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+          });
+    })
+    .catch(() => {
+        console.error("Error!");
     });
+   
   };
 
   return (

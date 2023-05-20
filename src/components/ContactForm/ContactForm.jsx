@@ -66,18 +66,23 @@ const ContactForm = ({ contacts }) => {
       });
       return;
     }
-    await addContact(values).unwrap();
-    toast.success('Contact is added to your phonebook', {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored',
+    await addContact(values).unwrap().then(() => {
+        toast.success('Contact is added to your phonebook', {
+            position: 'top-center',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+          });
+          resetForm();
+    })
+    .catch (() => {
+        console.error("Error!");
     });
-    resetForm();
+   
   };
 
   const checkContactName = name => {

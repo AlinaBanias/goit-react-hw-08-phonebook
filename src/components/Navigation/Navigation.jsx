@@ -29,9 +29,9 @@ export const Navigation = () => {
         component="div"
         sx={{ display: 'flex', gap: 2, alignItems: 'center' }}
       >
-        <CustomLink to="/goit-react-hw-08-phonebook">Home</CustomLink>
+        <CustomLink to="/">Home</CustomLink>
         {isLoggedIn && (
-          <NavLinkStyled to="/goit-react-hw-08-phonebook/contacts">
+          <NavLinkStyled to="/contacts">
             Contacts
           </NavLinkStyled>
         )}

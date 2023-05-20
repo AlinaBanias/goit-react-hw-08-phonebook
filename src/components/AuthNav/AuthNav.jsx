@@ -21,10 +21,10 @@ const NavLinkStyled = styled(NavLink)`
 export const AuthNav = () => {
   return (
     <Stack spacing={2} direction="row">
-      <NavLinkStyled to="/goit-react-hw-08-phonebook/register">
+      <NavLinkStyled to="/register">
         Register
       </NavLinkStyled>
-      <NavLinkStyled to="/goit-react-hw-08-phonebook/login">
+      <NavLinkStyled to="/login">
         Log In
       </NavLinkStyled>
     </Stack>

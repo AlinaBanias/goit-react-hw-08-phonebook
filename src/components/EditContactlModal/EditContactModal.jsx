@@ -18,7 +18,7 @@ const EditContactModal = () => {
   const contactNumber = contact.number;
   const [updateContact] = useUpdateContactMutation();
   const navigate = useNavigate();
-  const closeModal = () => navigate('/goit-react-hw-08-phonebook/contacts');
+  const closeModal = () => navigate('/contacts');
 
   const checkName = name =>
     contacts.find(
